@@ -126,7 +126,20 @@ const inlineKeyboard = {
 
 // Listener (handler) for showcasing inline keyboard layout
 bot.onText(/\/inline/, (msg) => {
-    bot.sendMessage(msg.chat.id, 'You have to agree with me, OK?', inlineKeyboard);
+    
+    bot.sendMessage(msg.chat.id, 'Does this help you?', inlineKeyboard);
+    if(answer === "NO"){
+        //search Database again or print out "No Answer"
+        try {
+            //try to search for a better answer
+            
+        } catch (error) {
+bot.sendMessage(msg.chat.id, 'I do not have any answer for this yet')
+            //if try failed, print out "No answer found yet"
+            
+        }
+
+    }
 });
 
 // Keyboard layout for requesting phone number access
