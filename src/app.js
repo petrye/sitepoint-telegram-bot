@@ -18,8 +18,17 @@ const inlineKeyboard = {
                 text: 'Bilanzierung',
                 callback_data: 'Bilanzierung'
             }, {
-                text: 'Mathematik 1',
-                callback_data: 'Mathematik 1'
+                text: 'Logik und Algebra',
+                callback_data: 'Logik und Algebra'
+            }, {
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }, {
+                text: 'Web Programmierung',
+                callback_data: 'Web Programmierung'
             }
         ]]
     }
@@ -76,7 +85,6 @@ const startKeyboard = {
 }
 
 bot.on('contact', async (msg) => {
-    
     bot.sendMessage(msg.chat.id, `test`);
 })
 
