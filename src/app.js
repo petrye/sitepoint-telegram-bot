@@ -15,7 +15,7 @@ const inlineKeyboard = {
     reply_markup: {
         inline_keyboard: [[
             {   
-                text: 'YES',
+                text: 'YES!',
                 callback_data: 'YES'
             }, {
                 text: 'NO',
