@@ -15,15 +15,16 @@ const inlineKeyboard = {
     reply_markup: {
         inline_keyboard: [[
             {   
-                text: 'YES',
-                callback_data: 'YES'
+                text: 'Bilanzierung',
+                callback_data: 'Bilanzierung'
             }, {
-                text: 'NO',
-                callback_data: 'NO'
+                text: 'Mathematik 1',
+                callback_data: 'Mathematik 1'
             }
         ]]
     }
 };
+
 
 // Listener (handler) for showcasing inline keyboard layout
 bot.onText(/\/inline/, (msg) => {
@@ -35,16 +36,17 @@ bot.onText(/\/inline/, (msg) => {
 bot.on('callback_query', (callbackQuery) => {
     const message = callbackQuery.message;
     const data = callbackQuery.data;
-    if(data === 'NO'){
-        bot.sendMessage(message.chat.id, `Tja dann kann ich dir auch nicht weiterhelfen`);
+    if(data === 'Bilanzierung'){
+        bot.sendMessage(message.chat.id, `tg://join?invite=NRMYsw-9ZlXaJfnTbizjpA`);
+        
 
     }
-    if(data === 'YES'){
-        bot.sendMessage(message.chat.id, `Na dann ist ja alles perfekt`);
+    if(data === 'Mathematik 1'){
+        bot.sendMessage(message.chat.id, `Bei Suizidgedanken wählen sie die 110.`);
 
-    }
-    
+    }    
 });
+
 
 // Keyboard layout for requesting phone number access
 const questionKeyboard = {
