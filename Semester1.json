@@ -1,0 +1,32 @@
+[
+    {
+      "Lecture" : "Lineare Algebra & Analysis" ,
+      "Telegram": "a"
+  },
+  {
+      "Lecture":"Betriebswirtschaftslehre",
+      "Telegram": "b"
+  },
+  {
+      "Lecture": "Marketing",
+      "Telegram": "c"
+
+  },
+  {
+      "Lecture": "Einführung in die Programmierung",
+      "Telegram": "d"
+  },
+  {
+      "Lecture": "Software Engineering",
+      "Telegram": "e"
+  },
+  {
+      "Lecture": "Einführung in die IT",
+      "Telegram": "f"
+  },
+  {
+      "Lecture":"Vertrags- und Schuldrecht",
+      "Telegram": "g"
+  }
+  
+]
