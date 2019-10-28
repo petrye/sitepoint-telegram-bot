@@ -8,7 +8,7 @@ const bot = new TelegramBot(token, {
     polling: true
 });
 
-const question = '';
+const question = 'Frage';
 
 // Inline keyboard options
 const inlineKeyboard = {
@@ -20,23 +20,140 @@ const inlineKeyboard = {
             }, {
                 text: 'Logik und Algebra',
                 callback_data: 'Logik und Algebra'
-            }, {
+            }], [{
                 text: 'Analysis und Lineare Algebra',
                 callback_data: 'Analysis und Lineare Algebra'
             }, {
                 text: 'Datenbanken',
                 callback_data: 'Datenbanken'
-            }, {
+            }], [{
                 text: 'Web Programmierung',
                 callback_data: 'Web Programmierung'
-            }
-        ]]
+            }, {
+                text: 'Projektmanagement',
+                callback_data: 'Projektmanagement'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }],  [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }],  [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }],  [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }],  [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }],  [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }],  [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }],  [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], [{
+                text: 'Analysis und Lineare Algebra',
+                callback_data: 'Analysis und Lineare Algebra'
+            }, {
+                text: 'Datenbanken',
+                callback_data: 'Datenbanken'
+            }], 
+        ]
     }
 };
 
 
 // Listener (handler) for showcasing inline keyboard layout
-bot.onText(/\/inline/, (msg) => {
+bot.onText(/\/groups/, (msg) => {
     
     bot.sendMessage(msg.chat.id, 'Does this help you?', inlineKeyboard);
     
@@ -47,13 +164,25 @@ bot.on('callback_query', (callbackQuery) => {
     const data = callbackQuery.data;
     if(data === 'Bilanzierung'){
         bot.sendMessage(message.chat.id, `tg://join?invite=NRMYsw-9ZlXaJfnTbizjpA`);
-        
-
+    
     }
-    if(data === 'Mathematik 1'){
+    if(data === 'Logik und Algebra'){  
         bot.sendMessage(message.chat.id, `Bei Suizidgedanken wählen sie die 110.`);
 
-    }    
+    }
+    if(data === 'Analysis und Lineare Algrebra'){
+        bot.sendMessage(message.chat.id, `Bei Suizidgedanken wählen sie die 110.`);
+
+    }      
+    if(data === 'Datenbanken'){
+        bot.sendMessage(message.chat.id, `Bei Suizidgedanken wählen sie die 110.`);
+
+    }  
+    if(data === 'Web Programmierung'){
+        bot.sendMessage(message.chat.id, `Bei Suizidgedanken wählen sie die 110.`);
+
+    } 
+    
 });
 
 
@@ -75,18 +204,21 @@ bot.onText(/\/question/,(msg)=> {
 
 const startKeyboard = {
     'reply_markup': {
-        'keyboard': [['Frage Suchen', 'Telegram Gruppen'], 
-            ['Noch irgendeine Funktion', 'FAQ']],
+        'keyboard': [[
+            {   
+                text: 'Fragen',
+                callback_data: '/question'
+            }, 
+            {   
+                text: 'Austausch',
+                callback_data: '/inline'
+            }]],
         resize_keyboard: true,
         one_time_keyboard: true,
         force_reply: true,
         request_contact: true,
     }
 }
-
-bot.on('contact', async (msg) => {
-    bot.sendMessage(msg.chat.id, `test`);
-})
 
 // Listener (handler) for telegram's /start event
 // This event happened when you start the conversation with both by the very first time
@@ -100,7 +232,8 @@ bot.onText(/\/start/, (msg) => {
       
             Available commands:
         
-            /question  question -   Ask a question to the bot
+            /question   -   Ask a question to the bot
+            /groups     -   Discuss with other people about lectures    
         `, startKeyboard
     );
 });
