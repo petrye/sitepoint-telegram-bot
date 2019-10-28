@@ -34,10 +34,10 @@ const startKeyboard = {
     'reply_markup': {
         'keyboard': [[
             {   
-                text: 'Fragen', 
+                text: '💬 Fragen', 
             }, 
             {   
-                text: 'Austausch',
+                text: '👥 Austausch',
             }]],
         resize_keyboard: true,
         one_time_keyboard: true,
@@ -226,14 +226,14 @@ bot.on('callback_query', (callbackQuery) => {
 // Keyboard layout for requesting phone number access
 const questionKeyboard = {
     "reply_markup": {
-        one_time_keyboard: true,
-        resize_keyboard: true,
-
         "keyboard": [[
             {
-                text: "Suche",
+                text: "🔎 Suche",
         },{
-                text: "Abbrechen",
-            }]]
+                text: "✖️ Abbrechen",
+            }]],
+
+        one_time_keyboard: true,
+        resize_keyboard: true,
     }
 };
