@@ -8,7 +8,51 @@ const bot = new TelegramBot(token, {
     polling: true
 });
 
-const question = 'Frage';
+const question = "";
+
+// Listener (handler) for telegram's /start event
+// This event happened when you start the conversation with both by the very first time
+// Provide the list of available commands
+bot.onText(/\/start/, (msg) => {
+    const chatId = msg.chat.id;
+    bot.sendMessage(
+        chatId,
+        `
+Servus, ich bin der DHBW-Richie!
+        
+Bin mit sehr viel Liebe von wahnsinnig charismatischen, hyperintelligenten Möchtegern-Programmierern erstellt worden. 
+        
+Aber genug von mir.
+        
+Wie kann ich dir weiterhelfen?
+             
+        `, startKeyboard
+    );
+});
+
+const startKeyboard = {
+    'reply_markup': {
+        'keyboard': [[
+            {   
+                text: 'Fragen', 
+            }, 
+            {   
+                text: 'Austausch',
+            }]],
+        resize_keyboard: true,
+        one_time_keyboard: true,
+        force_reply: true,
+    }
+}
+
+// Listener (handler) for telegram /start event
+bot.onText(/Frage/,(msg)=> {
+    bot.sendMessage(msg.chat.id, 'Was möchtest du wissen?', questionKeyboard)
+}) ;
+
+bot.onText(/Austausch/,(msg)=> {
+    bot.sendMessage(msg.chat.id, 'Worüber möchtest du dich austauschen?', inlineKeyboard)
+}) ;
 
 // Inline keyboard options
 const inlineKeyboard = {
@@ -152,13 +196,6 @@ const inlineKeyboard = {
 };
 
 
-// Listener (handler) for showcasing inline keyboard layout
-bot.onText(/\/groups/, (msg) => {
-    
-    bot.sendMessage(msg.chat.id, 'Does this help you?', inlineKeyboard);
-    
-});
-
 bot.on('callback_query', (callbackQuery) => {
     const message = callbackQuery.message;
     const data = callbackQuery.data;
@@ -189,51 +226,14 @@ bot.on('callback_query', (callbackQuery) => {
 // Keyboard layout for requesting phone number access
 const questionKeyboard = {
     "reply_markup": {
-        "one_time_keyboard": true,
-        "keyboard": [[{
-            text: "Suche meine Frage",
-            one_time_keyboard: true
-        }], ["Abbrechen"]]
+        one_time_keyboard: true,
+        resize_keyboard: true,
+
+        "keyboard": [[
+            {
+                text: "Suche",
+        },{
+                text: "Abbrechen",
+            }]]
     }
 };
-
-// Listener (handler) for telegram /start event
-bot.onText(/\/question/,(msg)=> {
-    bot.sendMessage(msg.chat.id, 'Du kannst jetzt deine Frage stellen', questionKeyboard)
-}) ;
-
-const startKeyboard = {
-    'reply_markup': {
-        'keyboard': [[
-            {   
-                text: 'Fragen',
-                callback_data: '/question'
-            }, 
-            {   
-                text: 'Austausch',
-                callback_data: '/inline'
-            }]],
-        resize_keyboard: true,
-        one_time_keyboard: true,
-        force_reply: true,
-        request_contact: true,
-    }
-}
-
-// Listener (handler) for telegram's /start event
-// This event happened when you start the conversation with both by the very first time
-// Provide the list of available commands
-bot.onText(/\/start/, (msg) => {
-    const chatId = msg.chat.id;
-    bot.sendMessage(
-        chatId,
-        `
-            Welcome at DHBW-Richie, thank you for using my service
-      
-            Available commands:
-        
-            /question   -   Ask a question to the bot
-            /groups     -   Discuss with other people about lectures    
-        `, startKeyboard
-    );
-});
