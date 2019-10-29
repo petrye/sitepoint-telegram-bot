@@ -50,9 +50,12 @@ bot.onText(/💬 Fragen/,(msg)=> {
 }) ;
 
 bot.onText(/👥 Austausch/,(msg)=> {
-    bot.sendMessage(msg.chat.id, 'Worüber möchtest du dich austauschen?', inlineKeyboard)
+    bot.sendMessage(msg.chat.id, 'Worüber möchtest du dich austauschen?', inlineKeyboard && questionKeyboard);
 }) ;
 
+bot.onText(/✖️️ Abbrechen/,(msg)=> {
+    bot.sendMessage(msg.chat.id, 'Dann halt nicht.', startKeyboard);
+}) ;
 
 // Inline keyboard options
 const inlineKeyboard = {
@@ -225,9 +228,11 @@ bot.on('callback_query', (callbackQuery) => {
 
 const questionKeyboard = {
     "reply_markup": {
-        "keyboard": [["✖️️ Abbrechen"]],
+        "keyboard": [[{
+            text: "✖️️ Abbrechen",
+        }]],
         resize_keyboard: true,
-        one_time_keyboard: true
+        one_time_keyboard: true,
     }
 };
 
@@ -270,8 +275,16 @@ bot.onText(/wwi18sec/,(msg)=> {
     bot.sendMessage(msg.chat.id, 'PAPPNASEN!', startKeyboard)
 }) ;
 
+bot.onText(/easteregg/,(msg)=> {
+    bot.sendMessage(msg.chat.id, 'Oh, du hast mich gefunden. Jedoch gibt es noch weitere.', startKeyboard)
+}) ;
+
 bot.onText(/äricp/,(msg)=> {
     bot.sendMessage(msg.chat.id, 'Fresh wie nie!', startKeyboard)
+}) ;
+
+bot.onText(/pi/,(msg)=> {
+    bot.sendMessage(msg.chat.id, '3,14159265358979323846264338327950288419716939937510', startKeyboard)
 }) ;
 
 bot.onText(/jaegergott/,(msg)=> {
