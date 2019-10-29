@@ -227,6 +227,7 @@ const questionKeyboard = {
     "reply_markup": {
         "keyboard": [["✖️️ Abbrechen"]],
         resize_keyboard: true,
+        one_time_keyboard: true
     }
 };
 
