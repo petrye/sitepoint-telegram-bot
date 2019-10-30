@@ -10,6 +10,7 @@ const bot = new TelegramBot(token, {
 
 const question = "";
 
+bot.get
 // Listener (handler) for telegram's /start event
 // This event happened when you start the conversation with both by the very first time
 // Provide the list of available commands
@@ -44,13 +45,14 @@ const startKeyboard = {
     }
 }
 
-// Listener (handler) for telegram /start event
 bot.onText(/💬 Fragen/,(msg)=> {
-    bot.sendMessage(msg.chat.id, 'Was möchtest du wissen?', questionKeyboard);
+    bot.sendMessage(msg.chat.id, 'Was möchtest du wissen?', cancelKeyboard);
 }) ;
 
+
 bot.onText(/👥 Austausch/,(msg)=> {
-    bot.sendMessage(msg.chat.id, 'Worüber möchtest du dich austauschen?', inlineKeyboard && questionKeyboard);
+    bot.sendMessage(msg.chat.id, '📚 Auswahl', inlineKeyboard);
+    bot.sendMessage(msg.chat.id, '📚 In welche Gruppe möchtest du?', cancelKeyboard);
 }) ;
 
 bot.onText(/✖️️ Abbrechen/,(msg)=> {
@@ -226,7 +228,7 @@ bot.on('callback_query', (callbackQuery) => {
 });
 
 
-const questionKeyboard = {
+const cancelKeyboard = {
     "reply_markup": {
         "keyboard": [[{
             text: "✖️️ Abbrechen",
@@ -273,6 +275,14 @@ const questionKeyboard = {
 
 bot.onText(/wwi18sec/,(msg)=> {
     bot.sendMessage(msg.chat.id, 'PAPPNASEN!', startKeyboard)
+}) ;
+
+bot.onText(/letztereihe/,(msg)=> {
+    bot.sendMessage(msg.chat.id, 'ATOS! (und Timon)', startKeyboard)
+}) ;
+
+bot.onText(/zweitereihe/,(msg)=> {
+    bot.sendMessage(msg.chat.id, 'NERDS! (Also Aaron & Co)', startKeyboard)
 }) ;
 
 bot.onText(/easteregg/,(msg)=> {
