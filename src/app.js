@@ -8,9 +8,6 @@ const bot = new TelegramBot(token, {
     polling: true
 });
 
-const question = "";
-
-bot.get
 // Listener (handler) for telegram's /start event
 // This event happened when you start the conversation with both by the very first time
 // Provide the list of available commands
@@ -47,8 +44,16 @@ const startKeyboard = {
 
 bot.onText(/💬 Fragen/,(msg)=> {
     bot.sendMessage(msg.chat.id, 'Was möchtest du wissen?', cancelKeyboard);
+    
+    bot.addListener("message", (msg) => {
+        try{
+            var question = msg.text;
+            bot.sendMessage(msg.chat.id, question, cancelKeyboard);
+        } catch(err){
+            bot.sendMessage(msg.chat.id, "666 Error")
+        }    
+    })
 }) ;
-
 
 bot.onText(/👥 Austausch/,(msg)=> {
     bot.sendMessage(msg.chat.id, '📚 Auswahl', inlineKeyboard);
@@ -295,6 +300,10 @@ bot.onText(/äricp/,(msg)=> {
 
 bot.onText(/pi/,(msg)=> {
     bot.sendMessage(msg.chat.id, '3,14159265358979323846264338327950288419716939937510', startKeyboard)
+}) ;
+
+bot.onText(/Danke/,(msg)=> {
+    bot.sendMessage(msg.chat.id, 'Gerne doch, du putziges Geschöpf.', startKeyboard)
 }) ;
 
 bot.onText(/jaegergott/,(msg)=> {
