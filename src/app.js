@@ -48,7 +48,9 @@ bot.onText(/💬 Fragen/,(msg)=> {
     bot.addListener("message", (msg) => {
         try{
             var question = msg.text;
-            bot.sendMessage(msg.chat.id, question, cancelKeyboard);
+            if(question != "✖️️ Abbrechen"){
+                bot.sendMessage(msg.chat.id, question, cancelKeyboard);
+            }
         } catch(err){
             bot.sendMessage(msg.chat.id, "666 Error")
         }    
@@ -61,6 +63,7 @@ bot.onText(/👥 Austausch/,(msg)=> {
 }) ;
 
 bot.onText(/✖️️ Abbrechen/,(msg)=> {
+    bot.removeAllListeners("message");
     bot.sendMessage(msg.chat.id, 'Dann halt nicht.', startKeyboard);
 }) ;
 
@@ -69,32 +72,32 @@ const inlineKeyboard = {
     reply_markup: {
         inline_keyboard: [[
             {   
-                text: 'Bilanzierung',
-                callback_data: 'Bilanzierung'
+                text: 'Finanzbuchhaltung',
+                callback_data: 'Finanzbuchhaltung'
             }, {
+                text: 'Handels- und Gesellschaftsrecht',
+                callback_data: 'Handels- und Gesellschaftsrecht'
+            }], [{
+                text: 'Kommunikations- und Betriebssysteme',
+                callback_data: 'Kommunikations- und Betriebssysteme'
+            }, {
+                text: 'Kosten- und Leistungsrechnung',
+                callback_data: 'Kosten- und Leistungsrechnung'
+            }], [{
                 text: 'Logik und Algebra',
                 callback_data: 'Logik und Algebra'
-            }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
             }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
+                text: 'Moderne Programmierkonzepte',
+                callback_data: 'Moderne Programmierkonzepte'
             }], [{
-                text: 'Web Programmierung',
-                callback_data: 'Web Programmierung'
+                text: 'Präsentation und Kommunikation',
+                callback_data: 'Präsentation und Kommunikation'
             }, {
-                text: 'Projektmanagement',
-                callback_data: 'Projektmanagement'
+                text: 'Programmieren II',
+                callback_data: 'Programmieren II'
             }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
-            }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
-            }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
+                text: 'Systemanalyse',
+                callback_data: 'Systemanalyse'
             }, {
                 text: 'Datenbanken',
                 callback_data: 'Datenbanken'
@@ -209,27 +212,42 @@ const inlineKeyboard = {
 bot.on('callback_query', (callbackQuery) => {
     const message = callbackQuery.message;
     const data = callbackQuery.data;
-    if(data === 'Bilanzierung'){
-        bot.sendMessage(message.chat.id, `tg://join?invite=NRMYsw-9ZlXaJfnTbizjpA`);
+    if(data === 'Finanzbuchhaltung'){
+        bot.sendMessage(message.chat.id, `tg://join?invite=OPAIJBTneo2nOtpJQW1OZg`);
     
     }
-    if(data === 'Logik und Algebra'){  
-        bot.sendMessage(message.chat.id, `Bei Suizidgedanken wählen sie die 110.`);
+    if(data === 'Handels- und Gesellschaftsrecht'){  
+        bot.sendMessage(message.chat.id, 'tg://join?invite=OPAIJBG-3psPyQ8_DnAQ5w');
 
     }
-    if(data === 'Analysis und Lineare Algrebra'){
-        bot.sendMessage(message.chat.id, `Bei Suizidgedanken wählen sie die 110.`);
+    if(data === 'Kommunikations- und Betriebssysteme'){
+        bot.sendMessage(message.chat.id, `tg://join?invite=OPAIJA-X5rNSatj3xYK-0w`);
 
     }      
-    if(data === 'Datenbanken'){
-        bot.sendMessage(message.chat.id, `Bei Suizidgedanken wählen sie die 110.`);
+    if(data === 'Kosten- und Leistungsrechnung'){
+        bot.sendMessage(message.chat.id, `tg://join?invite=OPAIJBMh5QzLGDZMpmyOWw`);
 
     }  
-    if(data === 'Web Programmierung'){
-        bot.sendMessage(message.chat.id, `Bei Suizidgedanken wählen sie die 110.`);
+    if(data === 'Logik und Algebra'){
+        bot.sendMessage(message.chat.id, `tg://join?invite=OPAIJBRrsdtbKrdD_jryRA`);
 
     } 
-    
+    if(data === 'Moderne Programmierkonzepte'){
+        bot.sendMessage(message.chat.id, 'tg://join?invite=OPAIJBe6hPFvOAXYYrKdAA');    
+
+    }
+    if(data === 'Präsentation und Kommunikation'){  
+        bot.sendMessage(message.chat.id, 'tg://join?invite=OPAIJBes55BU3LJ8bnsTWw');
+
+    }
+    if(data === 'Programmieren II'){
+        bot.sendMessage(message.chat.id, 'tg://join?invite=OPAIJBdSSQSZNXeUakzOwg');
+
+    }      
+    if(data === 'Systemanalyse'){
+        bot.sendMessage(message.chat.id, 'tg://join?invite=OPAIJBYblCfRi-t5dtsXSQ');
+
+    }    
 });
 
 
@@ -340,4 +358,8 @@ bot.onText(/striplive/,(msg)=> {
 
 bot.onText(/12oder3/,(msg)=> {
     bot.sendMessage(msg.chat.id, '\"This is not normal.\"', startKeyboard)
+}) ;
+
+bot.onText(/onenighter/,(msg)=> {
+    bot.sendMessage(msg.chat.id, '\"7 Stunden - kein Problem.\"', startKeyboard)
 }) ;
