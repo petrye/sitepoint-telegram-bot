@@ -73,183 +73,92 @@ const inlineKeyboard = {
         inline_keyboard: [[
             {   
                 text: 'Finanzbuchhaltung',
-                callback_data: 'Finanzbuchhaltung'
+                url:'tg://join?invite=OPAIJBTneo2nOtpJQW1OZg'
             }, {
-                text: 'Handels- und Gesellschaftsrecht',
-                callback_data: 'Handels- und Gesellschaftsrecht'
+                text: 'Handels- & Gesellschaftsrecht',
+                url: 'tg://join?invite=OPAIJBG-3psPyQ8_DnAQ5w'
             }], [{
-                text: 'Kommunikations- und Betriebssysteme',
-                callback_data: 'Kommunikations- und Betriebssysteme'
+                text: 'Kommunikations- & Betriebssysteme',
+                url: 'tg://join?invite=OPAIJA-X5rNSatj3xYK-0w'
             }, {
-                text: 'Kosten- und Leistungsrechnung',
-                callback_data: 'Kosten- und Leistungsrechnung'
+                text: 'Kosten- & Leistungsrechnung',
+                url: 'tg://join?invite=OPAIJBMh5QzLGDZMpmyOWw'
             }], [{
-                text: 'Logik und Algebra',
-                callback_data: 'Logik und Algebra'
+                text: 'Logik & Algebra',
+                url: 'tg://join?invite=OPAIJBRrsdtbKrdD_jryRA'
             }, {
                 text: 'Moderne Programmierkonzepte',
-                callback_data: 'Moderne Programmierkonzepte'
+                url: 'tg://join?invite=OPAIJBe6hPFvOAXYYrKdAA'
             }], [{
-                text: 'Präsentation und Kommunikation',
-                callback_data: 'Präsentation und Kommunikation'
+                text: 'Präsentation & Kommunikation',
+                url: 'tg://join?invite=OPAIJBes55BU3LJ8bnsTWw'
             }, {
                 text: 'Programmieren II',
-                callback_data: 'Programmieren II'
+                url: 'tg://join?invite=OPAIJBdSSQSZNXeUakzOwg'
             }], [{
                 text: 'Systemanalyse',
-                callback_data: 'Systemanalyse'
+                url: 'tg://join?invite=OPAIJBYblCfRi-t5dtsXSQ'
             }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
+                text: 'Advanced IT',
+                url: 'tg://join?invite=OPAIJBMbLp9ZRMyrwh3IVg'
             }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
+                text: 'Advanced Database',
+                url: 'tg://join?invite=OPAIJBXO1KG_7-70BYuS3w'
             }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
+                text: 'Bilanzierung',
+                url: 'tg://join?invite=OPAIJBaoV1M83DUaIrGVgA'
             }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
+                text: 'Investition & Finanzierung',
+                url: 'tg://join?invite=OPAIJBeM4KJdcoQY-FmVpA'
             }, {
                 text: 'Datenbanken',
-                callback_data: 'Datenbanken'
+                url: 'tg://join?invite=OPAIJBFhxuDWf38atYSmNA'
             }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
+                text: 'Projektmanagement',
+                url: 'tg://join?invite=OPAIJBXjFl-CZv_R1Z4NuA'
             }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
+                text: 'Software Engineering II',
+                url: 'tg://join?invite=OPAIJBIpk5coOv338_OZ8Q'
             }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
+                text: 'Statistik',
+                url: 'tg://join?invite=OPAIJBarCVymg8Ux3P2gXg'
             }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
+                text: 'Webentwicklung',
+                url: 'tg://join?invite=OPAIJBQIw1DGTImta5p3yQ'
             }],  [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
+                text: 'Wissenschaftliches Arbeiten II',
+                url: 'tg://join?invite=OPAIJBRyBMQq3XUpOHhJHQ'
             }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
+                text: 'BWL',
+                url: 'tg://join?invite=NRMYsxUOXqorOnjB8yGmdg'
             }],  [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
+                text: 'Einführung in die IT',
+                url: 'tg://join?invite=NRMYsw1xhAlLlmgQ1xLTpA'
             }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
+                text: 'Einführung in die WI',
+                url: 'tg://join?invite=NRMYsxMf3mgt3m_gjd7Keg'
             }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
+                text: 'Marketing',
+                url: 'tg://join?invite=NRMYsw_BW_Av06WtWWgZig'
             }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
+                text: 'Lineare Algebra & Analysis',
+                url: 'tg://join?invite=NRMYsxFHgBAXEe4Zl2F4cQ'
             }],  [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
+                text: 'Programmieren I',
+                url: 'tg://join?invite=NRMYsw-YDfi8NYlqHSd95g'
             }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
+                text: 'Vertrags- & Schuldrecht',
+                url: 'tg://join?invite=NRMYsxMwMoY2zIhRMHvONg'
             }],  [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
+                text: 'Wissenschaftliches Arbeiten I',
+                url: 'tg://join?invite=NRMYsxZmPgA3dEZ1kr76AQ'
             }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
-            }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
-            }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
-            }],  [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
-            }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
-            }],  [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
-            }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
-            }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
-            }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
-            }],  [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
-            }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
-            }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
-            }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
-            }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
-            }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
-            }], [{
-                text: 'Analysis und Lineare Algebra',
-                callback_data: 'Analysis und Lineare Algebra'
-            }, {
-                text: 'Datenbanken',
-                callback_data: 'Datenbanken'
-            }], 
+                text: 'Software Engineering I',
+                url: 'tg://join?invite=NRMYsw8qyy8ClF78jMg-vw'
+            }] 
         ]
     }
 };
-
-
-bot.on('callback_query', (callbackQuery) => {
-    const message = callbackQuery.message;
-    const data = callbackQuery.data;
-    if(data === 'Finanzbuchhaltung'){
-        bot.sendMessage(message.chat.id, `tg://join?invite=OPAIJBTneo2nOtpJQW1OZg`);
-    
-    }
-    if(data === 'Handels- und Gesellschaftsrecht'){  
-        bot.sendMessage(message.chat.id, 'tg://join?invite=OPAIJBG-3psPyQ8_DnAQ5w');
-
-    }
-    if(data === 'Kommunikations- und Betriebssysteme'){
-        bot.sendMessage(message.chat.id, `tg://join?invite=OPAIJA-X5rNSatj3xYK-0w`);
-
-    }      
-    if(data === 'Kosten- und Leistungsrechnung'){
-        bot.sendMessage(message.chat.id, `tg://join?invite=OPAIJBMh5QzLGDZMpmyOWw`);
-
-    }  
-    if(data === 'Logik und Algebra'){
-        bot.sendMessage(message.chat.id, `tg://join?invite=OPAIJBRrsdtbKrdD_jryRA`);
-
-    } 
-    if(data === 'Moderne Programmierkonzepte'){
-        bot.sendMessage(message.chat.id, 'tg://join?invite=OPAIJBe6hPFvOAXYYrKdAA');    
-
-    }
-    if(data === 'Präsentation und Kommunikation'){  
-        bot.sendMessage(message.chat.id, 'tg://join?invite=OPAIJBes55BU3LJ8bnsTWw');
-
-    }
-    if(data === 'Programmieren II'){
-        bot.sendMessage(message.chat.id, 'tg://join?invite=OPAIJBdSSQSZNXeUakzOwg');
-
-    }      
-    if(data === 'Systemanalyse'){
-        bot.sendMessage(message.chat.id, 'tg://join?invite=OPAIJBYblCfRi-t5dtsXSQ');
-
-    }    
-});
-
 
 const cancelKeyboard = {
     "reply_markup": {
